@@ -1,0 +1,269 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+
+
+
+/* ESTILO GERAL */
+
+
+:root {
+  --color-neutral-0: #0e0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29e;
+  --color-neutral-40: #f5f5f5;
+
+}
+
+
+:root{
+    --bg_color: #000000;
+    --alt_color: #C31613;
+}
+
+@font-face {
+    font-family: ZuumeRoughBold;
+    src: url(../fonts/Fontspring-DEMO-zuumerough-bold.otf);
+}
+
+* html ul li { float: left; }
+* html ul li a { height: 1%; }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+.flex{
+    display: flex;
+}
+
+.interface{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #000000;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Bebas Neue', sans-serif;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-direction:normal;
+    -webkit-box-orient:vertical;
+    -webkit-font-smoothing:antialiased;
+    
+}
+
+
+
+a{
+    color: #e0e0e0;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    display: inline-block;
+    transform: .2s ease-in;
+    position: relative;
+    transition: all .5s ease;
+    
+
+    
+    
+}
+
+a:hover{
+    color: var(--alt_color);
+    
+}
+
+#user{
+  content: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-style: normal;
+  display: inline-block;
+  color: #e0e0e0;
+  padding-top: 2px;
+}
+
+
+.hidden{
+  opacity: 0;
+  transform: translateY(-5%);
+  transition: all 1.7s;
+}
+
+.show{
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1.5s;
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+.header a::before{
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: var(--alt_color);
+    transition: all 1.5s ease;
+}
+
+.header a:hover::before{
+    width: 100%;
+}
+
+.header #a-c::before{
+    content: none;
+}
+.header #a-c{
+    color: #fff;
+}
+
+.header{
+  background-color: #171717; 
+  padding: 0 10%;
+   
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.064);
+    
+    
+    
+   
+}
+
+.header > .interface{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+nav{
+  display: flex;
+  gap: 3rem;
+  
+}
+
+.navbar-hd{
+  z-index: 2;   
+  display: flex;
+  align-self: center;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.navbar-hd a{
+  margin-bottom: -20px;
+}
+
+#link{
+  margin-top: 2px;
+}
+
+.btn {
+    margin-top: -300px;  
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 130px;
+    border: none;
+    
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+.btn-primary:hover {
+    background-color: #C31613;
+    color: #ffff;
+    border: 1px solid #db1411;
+}
+
+
+
+
+#a-f img{
+    width: 50px;
+    position: absolute;
+    opacity: 0;
+    margin-top: -40px;
+   
+}
+
+#a-f img:hover{
+    opacity: 1;
+    transition: opacity;
+}
+
+.logotipo img{
+    width: 155px;
+    /* margin-top: -30px; */
+    transform: none;
+    transition: none;
+    display: inline-block;
+    float: none;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+/* ESTILO MOBILE */
+
+.btn_icon_header{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* ESTILO DO TOPO */
+
+section.topo{
+    
+    padding: 10rem 1%;
+   
+    /* background-image: url(img/2.jpg);
+    background-size: cover;
+    background-position: center center; */
+    display: flex;
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(../img/6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+section.topo .flex{
+    align-items: center;
+    flex-direction: column;
+    gap: 5.625rem;
+    
+
+}
